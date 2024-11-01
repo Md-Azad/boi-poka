@@ -1,11 +1,12 @@
+import Banner from "../components/Banner/Banner";
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 
 const MainLayout = () => {
   return (
-    <div>
+    <div className="max-w-7xl mx-auto">
       <Navbar></Navbar>
-      <h1>Main Content will be here.</h1>
+      <Banner></Banner>
       <Footer></Footer>
     </div>
   );
