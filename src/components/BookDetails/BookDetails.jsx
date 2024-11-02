@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { addToReadList } from "../../utility/storedata";
 
 const BookDetails = () => {
   const { bookId } = useParams();
@@ -6,8 +7,7 @@ const BookDetails = () => {
 
   const data = useLoaderData();
 
-  const selectedBook = data.filter((d) => d.bookId === id);
-  console.log(selectedBook[0]);
+  const selectedBook = data.find((da) => da.bookId === id);
   const {
     bookName,
     image,
@@ -19,14 +19,18 @@ const BookDetails = () => {
     publisher,
     yearOfPublishing,
     rating,
-  } = selectedBook[0];
+  } = selectedBook;
+
+  const handleAddToReadList = (id) => {
+    addToReadList(id);
+  };
 
   return (
     <div className="my-8 mx-8 md:mx-0 grid grid-cols-1 md:grid-cols-2 gap-8">
       <div className=" h-[32rem] bg-gray-200 flex justify-center items-center rounded-lg">
         <img className="h-5/6 rounded-lg" src={image} alt="" />
       </div>
-      <div className="h-[32rem] my-4 md:my-0 ">
+      <div className="h-[32rem] my-4 md:my-0 overflow-scroll ">
         <h1 className="font-playfair text-5xl font-bold">{bookName}</h1>
         <h2 className="mb-4 font-semibold">By : {author} </h2>
         <hr />
@@ -59,11 +63,14 @@ const BookDetails = () => {
         </div>
 
         <div className="flex gap-4">
-          <button className="border px-4 py-2 rounded-lg bg-slate-50">
-            Read
+          <button
+            onClick={() => handleAddToReadList(id)}
+            className="border px-4 py-2 rounded-lg bg-slate-50"
+          >
+            Add to Read
           </button>
           <button className="border px-4 py-2 rounded-lg bg-blue-400 text-white">
-            Wishlist
+            Add to Wishlist
           </button>
         </div>
       </div>
