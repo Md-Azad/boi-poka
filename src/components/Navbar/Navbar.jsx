@@ -10,9 +10,6 @@ const Navbar = () => {
       <li>
         <NavLink to="/listedbooks">Listed Books</NavLink>
       </li>
-      <li>
-        <NavLink to="/pagetoread">Pages to Read</NavLink>
-      </li>
     </>
   );
 

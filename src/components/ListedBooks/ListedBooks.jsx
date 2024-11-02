@@ -23,7 +23,7 @@ const ListedBooks = () => {
 
   return (
     <div>
-      <h1>Listed books will be here.</h1>
+      <div className="flex justify-center"></div>
       <Tabs>
         <TabList>
           <Tab>Read List</Tab>
