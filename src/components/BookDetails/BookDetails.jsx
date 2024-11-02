@@ -1,5 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import { addToReadList } from "../../utility/storedata";
+import { addToReadList, addToWishList } from "../../utility/storedata";
 
 const BookDetails = () => {
   const { bookId } = useParams();
@@ -23,6 +23,9 @@ const BookDetails = () => {
 
   const handleAddToReadList = (id) => {
     addToReadList(id);
+  };
+  const handleAddToWishList = (id) => {
+    addToWishList(id);
   };
 
   return (
@@ -69,7 +72,10 @@ const BookDetails = () => {
           >
             Add to Read
           </button>
-          <button className="border px-4 py-2 rounded-lg bg-blue-400 text-white">
+          <button
+            onClick={() => handleAddToWishList(id)}
+            className="border px-4 py-2 rounded-lg bg-blue-400 text-white"
+          >
             Add to Wishlist
           </button>
         </div>
