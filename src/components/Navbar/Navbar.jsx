@@ -4,14 +4,14 @@ const Navbar = () => {
   const headLinks = (
     <>
       <li>
-        <NavLink>Home</NavLink>
+        <NavLink to="/">Home</NavLink>
       </li>
 
       <li>
-        <NavLink>Listed Books</NavLink>
+        <NavLink to="/listedbooks">Listed Books</NavLink>
       </li>
       <li>
-        <NavLink>Pages to Read</NavLink>
+        <NavLink to="/pagetoread">Pages to Read</NavLink>
       </li>
     </>
   );

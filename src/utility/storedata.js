@@ -20,4 +20,4 @@ const addToReadList = (id) => {
   }
 };
 
-export { addToReadList };
+export { addToReadList, getStoredData };

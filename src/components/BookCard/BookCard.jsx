@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 const BookCard = ({ book }) => {
   const { bookId, image, bookName, author, tags, category } = book;
   return (
-    <Link to={`book/${bookId}`}>
-      <div className="card shadow-xl p-4 border ">
+    <Link to={`/book/${bookId}`}>
+      <div className="card shadow-xl p-4 border max-w-96 my-4 ">
         <div className="bg-gray-200 py-4 rounded-lg">
           <figure className="w-32 h-56 mx-auto">
             <img className="w-full rounded-lg" src={image} alt="Shoes" />
@@ -12,7 +12,7 @@ const BookCard = ({ book }) => {
         </div>
         <div className="space-y-8 my-4">
           <div className="flex gap-4 ">
-            {tags.map((tag, index) => (
+            {tags?.map((tag, index) => (
               <p className="bg-green-100 rounded-md" key={index}>
                 {tag}
               </p>
