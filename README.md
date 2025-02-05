@@ -36,6 +36,20 @@ cd boi-poka
 npm i
 ```
 
+## 📦 Dependencies  
+This project uses the following dependencies:  
+
+- `localforage`  
+- `match-sorter`  
+- `react`  
+- `react-dom`  
+- `react-router-dom`  
+- `react-tabs`  
+- `react-toastify`  
+- `sort-by`  
+
+---
+
 📚 Usage
 - View Books: Browse and explore the book collection
 - See Book Details: Click on a book to see its full information
